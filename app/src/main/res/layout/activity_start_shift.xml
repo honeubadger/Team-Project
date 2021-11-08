@@ -60,4 +60,39 @@
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="165dp"
         tools:layout_editor_absoluteY="85dp" />
+
+    <Button
+        android:id="@+id/btnstartshift"
+        android:layout_width="245dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onStartShiftloggedClicked"
+        android:text="Start Shift"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="245dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Login with FaceID"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.266" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="245dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="136dp"
+        android:text="Login with Fingerprint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnstartshift" />
 </androidx.constraintlayout.widget.ConstraintLayout>
