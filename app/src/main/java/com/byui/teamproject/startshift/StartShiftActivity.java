@@ -21,4 +21,9 @@ public class StartShiftActivity extends AppCompatActivity {
         Intent intent = new Intent(this, WelcomeEmployee.class);
         startActivity(intent);
     }
+
+    public void onLoginWithFaceIDClicked(View view) {
+        Intent intent = new Intent(this, LoginWithFaceID.class);
+        startActivity(intent);
+    }
 }
