@@ -13,6 +13,12 @@
             android:name=".startshift.LoginWithFaceID"
             android:exported="false" />
         <activity
+            android:name=".stopshift.StopShiftActivity"
+            android:exported="false" />
+        <activity
+            android:name=".stopshift.GoodbyeEmployee"
+            android:exported="false" />
+        <activity
             android:name=".startshift.WelcomeEmployee"
             android:exported="false" />
         <activity
