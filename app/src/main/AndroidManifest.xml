@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamProject">
         <activity
+            android:name=".stopshift.LogoutWithFaceID"
+            android:exported="false" />
+        <activity
+            android:name=".stopshift.StopShiftActivity"
+            android:exported="false" />
+        <activity
+            android:name=".stopshift.GoodbyeEmployee"
+            android:exported="false" />
+        <activity
             android:name=".startshift.WelcomeEmployee"
             android:exported="false" />
         <activity
