@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamProject">
         <activity
+            android:name=".startshift.LoginWithFaceID"
+            android:exported="false" />
+        <activity
             android:name=".startshift.WelcomeEmployee"
             android:exported="false" />
         <activity
