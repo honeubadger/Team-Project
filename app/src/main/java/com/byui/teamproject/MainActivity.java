@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.byui.teamproject.records.ShowRecords;
 import com.byui.teamproject.startshift.StartShiftActivity;
+import com.byui.teamproject.stopshift.StopShiftActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onShowRecordsClicked(View view) {
         Intent intent = new Intent(this, ShowRecords.class);
+        startActivity(intent);
+    }
+    public void onStopShiftClicked(View view) {
+        Intent intent = new Intent(this, StopShiftActivity.class);
         startActivity(intent);
     }
 }

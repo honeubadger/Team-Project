@@ -16,6 +16,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         <activity
+            android:name=".stopshift.LogoutWithFaceID"
+            android:exported="false" />
+        <activity
+            android:name=".stopshift.StopShiftActivity"
+            android:exported="false" />
+        <activity
+            android:name=".stopshift.GoodbyeEmployee"
+            android:exported="false" />
+        <activity
+            android:name=".startshift.LoginWithFaceID"
+            android:exported="false" />
+        <activity
             android:name=".startshift.WelcomeEmployee"
             android:exported="false" />
             <meta-data
