@@ -23,10 +23,10 @@ public class StopShiftActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onStopShiftFaceIDClicked(View view) {
+    /*public void onStopShiftFaceIDClicked(View view) {
         Intent intent = new Intent(this, LogoutWithFaceID.class);
         startActivity(intent);
-    }
+    }*/
 
 
 }
