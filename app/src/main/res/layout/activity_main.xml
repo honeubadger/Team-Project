@@ -11,6 +11,7 @@
         android:layout_width="245dp"
         android:layout_height="65dp"
         android:layout_marginTop="168dp"
+        android:backgroundTint="@android:color/system_accent3_900"
         android:onClick="onStartShiftClicked"
         android:text="Start Shift"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,6 +24,7 @@
         android:layout_width="245dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="?android:attr/colorPressedHighlight"
         android:onClick="onStopShiftClicked"
         android:text="Stop Shift"
         app:layout_constraintEnd_toEndOf="@+id/btnStartShift"
@@ -34,6 +36,7 @@
         android:layout_width="245dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/system_accent3_900"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="@+id/btnStopShift"
         app:layout_constraintHorizontal_bias="0.0"
@@ -45,10 +48,22 @@
         android:layout_width="245dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="?android:attr/colorPressedHighlight"
         android:onClick="onShowRecordsClicked"
         android:text="Show Records"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/editbox_dropdown_light_frame" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
