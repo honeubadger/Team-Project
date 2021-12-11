@@ -1,12 +1,13 @@
 package com.byui.teamproject.stopshift;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.byui.teamproject.R;
+import com.byui.teamproject.fingerprint.Fingerprint;
 
 public class StopShiftActivity extends AppCompatActivity {
 
@@ -27,6 +28,11 @@ public class StopShiftActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LogoutWithFaceID.class);
         startActivity(intent);
     }*/
+
+    public void onStopShiftFingerprintClicked(View view) {
+        Intent intent = new Intent(this, Fingerprint.class);
+        startActivity(intent);
+    }
 
 
 }

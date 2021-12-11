@@ -92,6 +92,7 @@
         android:layout_width="245dp"
         android:layout_height="65dp"
         android:layout_marginTop="136dp"
+        android:onClick="onLoginWithFingerprintClicked"
         android:text="Login with Fingerprint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

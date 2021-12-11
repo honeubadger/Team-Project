@@ -66,6 +66,7 @@
         android:layout_width="218dp"
         android:layout_height="54dp"
         android:layout_marginTop="136dp"
+        android:onClick="onStopShiftFingerprintClicked"
         android:text="Logout with Fingerptrint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

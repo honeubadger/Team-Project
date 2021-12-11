@@ -34,6 +34,7 @@
         android:layout_width="245dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
+        android:onClick="onRegisterClicked"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="@+id/btnStopShift"
         app:layout_constraintHorizontal_bias="0.0"
