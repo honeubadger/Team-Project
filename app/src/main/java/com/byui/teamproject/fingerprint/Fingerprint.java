@@ -34,13 +34,13 @@ public class Fingerprint extends AppCompatActivity {
             @Override
             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
-                txt.setText("An error occurred : " + errString);
+                txt.setText("An error occurred : " + errString + "\nYour fingerprint was not recognized");
             }
 
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-                txt.setText("Authentication Success : " + result.toString());
+                txt.setText("Authentication Success, you are now logged in");
             }
 
             @Override
