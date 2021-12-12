@@ -66,6 +66,7 @@
         android:layout_width="245dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="?android:attr/colorPressedHighlight"
         android:onClick="onStartShiftloggedClicked"
         android:text="Start Shift"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,6 +80,7 @@
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="?android:attr/colorPressedHighlight"
         android:onClick="onLoginWithFaceIDClicked"
         android:text="Login with FaceID"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,8 +95,19 @@
         android:layout_height="65dp"
         android:layout_marginTop="136dp"
         android:onClick="onLoginWithFingerprintClicked"
+        android:backgroundTint="@android:color/system_accent3_900"
         android:text="Login with Fingerprint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnstartshift" />
+
+    <ImageView
+        android:id="@+id/logoImage1"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/company_logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
