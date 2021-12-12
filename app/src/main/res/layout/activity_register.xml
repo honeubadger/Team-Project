@@ -7,7 +7,7 @@
     tools:context=".register.RegisterActivity">
 
     <EditText
-        android:id="@+id/emailInput2"
+        android:id="@+id/positionInput"
         android:layout_width="210dp"
         android:layout_height="46dp"
         android:layout_marginTop="228dp"
@@ -78,7 +78,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/passwordtxt"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput2" />
+        app:layout_constraintTop_toBottomOf="@+id/positionInput" />
 
     <TextView
         android:id="@+id/passwordtxt"
