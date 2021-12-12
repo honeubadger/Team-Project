@@ -23,6 +23,7 @@ public class WelcomeEmployee extends AppCompatActivity {
 
         ((TextView) findViewById(R.id.employeenamewelcome)).setText("Welcome " + MyDatabase.currentUser.name);
         ((TextView) findViewById(R.id.employeepositionwelkcome)).setText(MyDatabase.currentUser.position);
+        ((TextView) findViewById(R.id.timestamp)).setText(MyDatabase.currentUser.lastLoggedIn);
 
     }
 }

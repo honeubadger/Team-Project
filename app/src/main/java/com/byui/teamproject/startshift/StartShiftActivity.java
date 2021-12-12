@@ -14,6 +14,9 @@ import com.byui.teamproject.database.MyDatabase;
 import com.byui.teamproject.database.User;
 import com.byui.teamproject.fingerprint.Fingerprint;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class StartShiftActivity extends AppCompatActivity {
 
     @Override
@@ -32,6 +35,9 @@ public class StartShiftActivity extends AppCompatActivity {
 
         for (User user : MyDatabase.users) {
             if (user.email.equals(email) && user.password.equals(password)) {
+                String formattedDate = new SimpleDateFormat("yyyy/MM/dd  HH:mm:ss").format(Calendar.getInstance().getTime());
+
+                user.lastLoggedIn = formattedDate;
                 MyDatabase.currentUser = user;
                 Intent intent = new Intent(this, WelcomeEmployee.class);
                 startActivity(intent);

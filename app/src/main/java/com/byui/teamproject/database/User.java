@@ -9,6 +9,8 @@ public class User {
     public String email = "";
     public String password = "";
     public String position = "";
+    public String lastLoggedIn = "";
+    public String lastLoggedOut = "";
 
     public User(String name, String email, String password, String position) {
         this.id = Integer.toString(count);

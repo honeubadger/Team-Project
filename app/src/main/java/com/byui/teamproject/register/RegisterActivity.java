@@ -10,6 +10,8 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.byui.teamproject.R;
+import com.byui.teamproject.database.MyDatabase;
+import com.byui.teamproject.database.User;
 
 import java.security.SecureRandom;
 import java.util.Arrays;
@@ -40,14 +42,14 @@ public class RegisterActivity extends AppCompatActivity {
         EditText e = findViewById(R.id.emailInput);
         String email = e.getText().toString();
 
-        EditText i = findViewById(R.id.idInput);
-        String id = i.getText().toString();
-
         EditText p = findViewById(R.id.passwordInput);
-        String pwd = p.getText().toString();
-        String password = hashUserPassword(pwd);
+        String password = p.getText().toString();
 
-        Log.i("Password : ", password);
+        EditText positionInput = findViewById(R.id.positionInput);
+        String position = p.getText().toString();
+
+        MyDatabase.users.add(new User(name, email, password, position));
+        finish();
     }
 
     private static byte[] getNextSalt() {
