@@ -8,7 +8,11 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.byui.teamproject.R;
+import com.byui.teamproject.database.MyDatabase;
 import com.byui.teamproject.fingerprint.Fingerprint;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class StopShiftActivity extends AppCompatActivity {
 
@@ -23,6 +27,10 @@ public class StopShiftActivity extends AppCompatActivity {
     }
 
     public void onStopShiftloggedClicked(View view) {
+        String formattedDate = new SimpleDateFormat("yyyy/MM/dd  HH:mm:ss").format(Calendar.getInstance().getTime());
+        MyDatabase.currentUser.lastLoggedIn = formattedDate;
+        MyDatabase.currentUser = null;
+
         Intent intent = new Intent(this, GoodbyeEmployee.class);
         startActivity(intent);
     }
