@@ -3,11 +3,15 @@ package com.byui.teamproject.startshift;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.byui.teamproject.R;
+import com.byui.teamproject.database.MyDatabase;
+import com.byui.teamproject.database.User;
 import com.byui.teamproject.fingerprint.Fingerprint;
 
 public class StartShiftActivity extends AppCompatActivity {
@@ -21,9 +25,20 @@ public class StartShiftActivity extends AppCompatActivity {
 
         setTitle("Start Shift");
     }
+
     public void onStartShiftloggedClicked(View view) {
-        Intent intent = new Intent(this, WelcomeEmployee.class);
-        startActivity(intent);
+        String email = ((EditText) findViewById(R.id.editTextTextPersonName)).getText().toString();
+        String password = ((EditText) findViewById(R.id.editTextTextPassword)).getText().toString();
+
+        for (User user : MyDatabase.users) {
+            if (user.email.equals(email) && user.password.equals(password)) {
+                MyDatabase.currentUser = user;
+                Intent intent = new Intent(this, WelcomeEmployee.class);
+                startActivity(intent);
+                return;
+            }
+        }
+        Toast.makeText(getApplicationContext(), "Email or Password Invalid", Toast.LENGTH_SHORT).show();
     }
 
     public void onLoginWithFingerprintClicked(View view) {
