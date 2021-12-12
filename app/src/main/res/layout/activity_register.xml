@@ -7,29 +7,29 @@
     tools:context=".register.RegisterActivity">
 
     <EditText
-        android:id="@+id/idInput"
-        android:layout_width="wrap_content"
+        android:id="@+id/emailInput2"
+        android:layout_width="210dp"
         android:layout_height="46dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="228dp"
         android:ems="10"
-        android:hint="1234"
-        android:inputType="number"
+        android:hint="Employee"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/passwordtxt"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/idtxt"
+        android:id="@+id/postxt"
         android:layout_width="151dp"
         android:layout_height="29dp"
-        android:layout_marginTop="20dp"
-        android:text="ID :"
+        android:layout_marginTop="16dp"
+        android:text="Position :"
         android:textAlignment="textEnd"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
         android:id="@+id/nameInput"
@@ -78,7 +78,44 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/passwordtxt"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+        app:layout_constraintTop_toBottomOf="@+id/emailInput2" />
+
+    <TextView
+        android:id="@+id/passwordtxt"
+        android:layout_width="151dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="16dp"
+        android:text="Password :"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postxt" />
+
+    <EditText
+        android:id="@+id/idInput"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="1234"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/passwordtxt"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
+
+    <TextView
+        android:id="@+id/idtxt"
+        android:layout_width="151dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="16dp"
+        android:text="ID :"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordtxt" />
 
     <EditText
         android:id="@+id/emailInput"
@@ -91,19 +128,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/passwordtxt"
-        android:layout_width="151dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="20dp"
-        android:text="Password:  "
-        android:textAlignment="textEnd"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
         android:id="@+id/rgstr"

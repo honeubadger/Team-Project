@@ -2,7 +2,6 @@ package com.byui.teamproject.register;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -43,11 +42,11 @@ public class RegisterActivity extends AppCompatActivity {
         EditText i = findViewById(R.id.idInput);
         String id = i.getText().toString();
 
-        EditText p = findViewById(R.id.passwordInput);
-        String pwd = p.getText().toString();
-        String password = hashUserPassword(pwd);
+        EditText po = findViewById(R.id.positionInput);
+        String position = po.getText().toString();
 
-        Log.i("Password : ", password);
+        EditText pa = findViewById(R.id.passwordInput);
+        String password = hashUserPassword(pa.getText().toString());
     }
 
     private static byte[] getNextSalt() {
