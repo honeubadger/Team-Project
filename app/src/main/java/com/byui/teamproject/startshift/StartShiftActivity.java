@@ -1,14 +1,17 @@
 package com.byui.teamproject.startshift;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.byui.teamproject.Hash;
 import com.byui.teamproject.R;
 import com.byui.teamproject.database.MyDatabase;
 import com.byui.teamproject.database.User;
@@ -29,9 +32,10 @@ public class StartShiftActivity extends AppCompatActivity {
         setTitle("Start Shift");
     }
 
-    public void onStartShiftloggedClicked(View view) {
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void onStartShiftloggedClicked(View view) throws Exception {
         String email = ((EditText) findViewById(R.id.editTextTextPersonName)).getText().toString();
-        String password = ((EditText) findViewById(R.id.editTextTextPassword)).getText().toString();
+        String password = Hash.hashUserPassword(((EditText) findViewById(R.id.editTextTextPassword)).getText().toString());
 
         for (User user : MyDatabase.users) {
             if (user.email.equals(email) && user.password.equals(password)) {
