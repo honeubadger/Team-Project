@@ -2,7 +2,6 @@ package com.byui.teamproject.register;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -43,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         String email = e.getText().toString();
 
         EditText p = findViewById(R.id.passwordInput);
-        String password = p.getText().toString();
+        String password = hashUserPassword(p.getText().toString());
 
         EditText positionInput = findViewById(R.id.positionInput);
         String position = p.getText().toString();
