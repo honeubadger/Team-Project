@@ -14,14 +14,19 @@ public class User {
     public String lastLoggedIn = "";
     public String lastLoggedOut = "";
 
-    public User(String name, String email, String password, String position) {
+    public User(String name, String email, String password, String position, boolean randomData) {
         this.id = Integer.toString(count);
         this.name = name;
         this.email = email;
         this.password = password;
         this.position = position;
-        this.lastLoggedIn = "2021/12/" + randomNumber(0, 13) + "  " + randomNumber(0, 24) + ":" + randomNumber(0, 60) + ":" + randomNumber(0, 60);
-        this.lastLoggedOut = "2021/12/" + randomNumber(0, 13) + "  " + randomNumber(0, 24) + ":" + randomNumber(0, 60) + ":" + randomNumber(0, 60);
+        if (randomData) {
+            this.lastLoggedIn = "2021/12/" + randomNumber(0, 13) + "  " + randomNumber(0, 24) + ":" + randomNumber(0, 60) + ":" + randomNumber(0, 60);
+            this.lastLoggedOut = "2021/12/" + randomNumber(0, 13) + "  " + randomNumber(0, 24) + ":" + randomNumber(0, 60) + ":" + randomNumber(0, 60);
+        } else {
+            this.lastLoggedIn = "";
+            this.lastLoggedOut = "";
+        }
 
         count += 5;
     }

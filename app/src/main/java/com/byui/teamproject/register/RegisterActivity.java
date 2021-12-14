@@ -48,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         editor.apply();
 
-        MyDatabase.users.add(new User(name, email, password, position));
+        MyDatabase.users.add(new User(name, email, password, position, false));
         finish();
     }
 }
