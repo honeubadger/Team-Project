@@ -1,5 +1,7 @@
 package com.byui.teamproject.register;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -30,6 +32,16 @@ public class RegisterActivity extends AppCompatActivity {
 
         EditText positionInput = findViewById(R.id.positionInput);
         String position = p.getText().toString();
+
+        Context context = this;
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                getString(R.string.login_details), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        editor.putString("email", email);
+        editor.putString("password", password);
+
+        editor.apply();
 
         MyDatabase.users.add(new User(name, email, password, position));
         finish();
