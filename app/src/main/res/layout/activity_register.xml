@@ -11,13 +11,13 @@
         android:id="@+id/nameInput"
         android:layout_width="210dp"
         android:layout_height="46dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
         android:hint="John Doe"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/positionInput"
@@ -60,7 +60,7 @@
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="wrap_content"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Strong password"
         android:inputType="textPassword"
@@ -72,13 +72,12 @@
         android:id="@+id/emailInput"
         android:layout_width="210dp"
         android:layout_height="46dp"
-        android:layout_marginTop="184dp"
         android:ems="10"
         android:hint="johndoe@mymail.com"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/nameInput" />
 
     <TextView
         android:id="@+id/passwordtxt"

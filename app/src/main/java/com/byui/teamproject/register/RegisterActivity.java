@@ -20,7 +20,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        ImageView reglogo = (ImageView) findViewById(R.id.logoImage5);
+        ImageView reglogo = (ImageView) findViewById(R.id.imageView);
         reglogo.setImageResource(R.drawable.company_logo);
     }
 
