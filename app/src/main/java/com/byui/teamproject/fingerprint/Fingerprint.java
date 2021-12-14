@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.byui.teamproject.R;
@@ -27,6 +28,9 @@ public class Fingerprint extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fingerprint);
         txt = findViewById(R.id.txt);
+
+        ImageView fplogo = (ImageView) findViewById(R.id.fpImage);
+        fplogo.setImageResource(R.drawable.company_logo);
 
 
         Executor executor = ContextCompat.getMainExecutor(this);

@@ -11,6 +11,7 @@
       android:id="@+id/authBut"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:backgroundTint="@color/navy_blue"
       android:text="Authenticate using Fingerprint"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
@@ -29,4 +30,14 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/authBut" />
+
+  <ImageView
+      android:id="@+id/fpImage"
+      android:layout_width="378dp"
+      android:layout_height="56dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/company_logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
