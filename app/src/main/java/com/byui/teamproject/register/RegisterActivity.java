@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +19,9 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        ImageView reglogo = (ImageView) findViewById(R.id.logoImage5);
+        reglogo.setImageResource(R.drawable.company_logo);
     }
 
     public void onRegisterButtonClicked(View view) {

@@ -8,8 +8,8 @@
 
     <ListView
         android:id="@+id/employee_list"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="385dp"
+        android:layout_height="578dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -17,5 +17,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/logoImage7"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/logoImage7"
+        android:layout_width="374dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/company_logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.byui.teamproject.R;
@@ -18,6 +19,9 @@ public class ShowRecords extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_records);
+
+        ImageView reclogo = (ImageView) findViewById(R.id.logoImage7);
+        reclogo.setImageResource(R.drawable.company_logo);
     }
 
     @Override
