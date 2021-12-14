@@ -87,6 +87,8 @@ public class Fingerprint extends AppCompatActivity {
                     Intent intent = new Intent(context, MainActivity.class);
                     startActivity(intent);
                     return;
+                } else {
+                    Toast.makeText(getApplicationContext(), "System error, please contact app creator", Toast.LENGTH_SHORT).show();
                 }
             }
 
