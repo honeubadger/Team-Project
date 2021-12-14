@@ -1,6 +1,8 @@
 package com.byui.teamproject.startshift;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -33,6 +35,17 @@ public class StartShiftActivity extends AppCompatActivity {
         String email = ((EditText) findViewById(R.id.editTextTextPersonName)).getText().toString();
         String password = ((EditText) findViewById(R.id.editTextTextPassword)).getText().toString();
 
+        Context context = this;
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                getString(R.string.login_details), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        editor.putString("log", "login");
+        editor.putString("email", email);
+        editor.putString("password", password);
+
+        editor.apply();
+
         for (User user : MyDatabase.users) {
             if (user.email.equals(email) && user.password.equals(password)) {
                 String formattedDate = new SimpleDateFormat("yyyy/MM/dd  HH:mm:ss").format(Calendar.getInstance().getTime());
@@ -48,6 +61,16 @@ public class StartShiftActivity extends AppCompatActivity {
     }
 
     public void onLoginWithFingerprintClicked(View view) {
+
+        Context context = this;
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                getString(R.string.login_details), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        editor.putString("log", "login");
+
+        editor.apply();
+
         Intent intent = new Intent(this, Fingerprint.class);
         startActivity(intent);
     }

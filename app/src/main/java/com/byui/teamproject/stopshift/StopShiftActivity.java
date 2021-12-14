@@ -1,6 +1,8 @@
 package com.byui.teamproject.stopshift;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -41,6 +43,15 @@ public class StopShiftActivity extends AppCompatActivity {
     }*/
 
     public void onStopShiftFingerprintClicked(View view) {
+        Context context = this;
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                getString(R.string.login_details), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        editor.putString("log", "logout");
+
+        editor.apply();
+
         Intent intent = new Intent(this, Fingerprint.class);
         startActivity(intent);
     }

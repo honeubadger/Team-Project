@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
+import com.byui.teamproject.MainActivity;
 import com.byui.teamproject.R;
 import com.byui.teamproject.database.MyDatabase;
 import com.byui.teamproject.database.User;
@@ -32,6 +33,7 @@ public class Fingerprint extends AppCompatActivity {
     public TextView txt;
     public String email;
     public String password;
+    public String log;
     public Context context;
 
     @Override
@@ -45,9 +47,9 @@ public class Fingerprint extends AppCompatActivity {
 
         email = shared.getString("email", "null");
         password = shared.getString("password", "null");
+        log = shared.getString("log", "null");
 
-        Log.i("Email and password : ", email + " " + password);
-
+        Log.i("Informations :", email + " " + password + " " + log);
 
         Executor executor = ContextCompat.getMainExecutor(this);
         biometricPrompt = new BiometricPrompt(Fingerprint.this, executor, new BiometricPrompt.AuthenticationCallback() {
@@ -62,18 +64,30 @@ public class Fingerprint extends AppCompatActivity {
                 super.onAuthenticationSucceeded(result);
                 txt.setText("Authentication Success, you are now logged in");
 
-                for (User user : MyDatabase.users) {
-                    if (user.email.equals(email) && user.password.equals(password)) {
-                        String formattedDate = new SimpleDateFormat("yyyy/MM/dd  HH:mm:ss").format(Calendar.getInstance().getTime());
+                if(log=="login") {
+                    for (User user : MyDatabase.users) {
+                        if (user.email.equals(email) && user.password.equals(password)) {
+                            String formattedDate = new SimpleDateFormat("yyyy/MM/dd  HH:mm:ss").format(Calendar.getInstance().getTime());
 
-                        user.lastLoggedIn = formattedDate;
-                        MyDatabase.currentUser = user;
-                        Intent intent = new Intent(context, WelcomeEmployee.class);
-                        startActivity(intent);
-                        return;
+                            user.lastLoggedIn = formattedDate;
+                            MyDatabase.currentUser = user;
+                            Intent intent = new Intent(context, WelcomeEmployee.class);
+                            startActivity(intent);
+                            return;
+                        }
                     }
+                    Toast.makeText(getApplicationContext(), "Email or Password Invalid", Toast.LENGTH_SHORT).show();
+                } else if(log=="logout") {
+                    String formattedDate = new SimpleDateFormat("yyyy/MM/dd  HH:mm:ss").format(Calendar.getInstance().getTime());
+                    MyDatabase.currentUser.lastLoggedIn = formattedDate;
+                    MyDatabase.currentUser = null;
+
+                    Toast.makeText(getApplicationContext(), "You are successfully logged out", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(context, MainActivity.class);
+                    startActivity(intent);
+                    return;
                 }
-                Toast.makeText(getApplicationContext(), "Email or Password Invalid", Toast.LENGTH_SHORT).show();
             }
 
             @Override

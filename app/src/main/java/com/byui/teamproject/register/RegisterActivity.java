@@ -38,6 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
                 getString(R.string.login_details), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
+        editor.putString("log", "login");
         editor.putString("email", email);
         editor.putString("password", password);
 
